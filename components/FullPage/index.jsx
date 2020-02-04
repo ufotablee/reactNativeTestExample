@@ -3,7 +3,6 @@ import { Modal,Button } from 'react-native';
 import styled from 'styled-components/native'
 
 const FullPage = ({url,setIsVisiable,visiable}) => {
-  console.log(visiable)
   return (
      <Container>
        <Modal
