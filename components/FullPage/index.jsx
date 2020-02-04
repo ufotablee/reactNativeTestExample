@@ -1,15 +1,19 @@
 import React from 'react';
-import { Modal } from 'react-native';
+import { Modal,Button } from 'react-native';
 import styled from 'styled-components/native'
 
-const FullPage = ({url}) => {
-  
+const FullPage = ({url,setIsVisiable,visiable}) => {
+  console.log(visiable)
   return (
      <Container>
        <Modal
      animationType="slide"
      transparent={false}
      >
+     <Button
+          title="Back"
+          onPress={() => setIsVisiable(!visiable)}
+      />
      <GroupImg source={{uri: url}} /> 
      </Modal>
     </Container>
