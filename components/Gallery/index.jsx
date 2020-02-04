@@ -10,9 +10,7 @@ const GroupList = ({data}) => {
         </GroupTitle>
         <GroupRow>
         {data && data.map((item,index) => {
-            console.log(1)
           return (
-          
           <GalleryItem {...item} key={index}
           />
           )

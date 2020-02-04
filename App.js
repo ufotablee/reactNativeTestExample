@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/native'
-import { StyleSheet, Text, SafeAreaView, ScrollView } from 'react-native';
+import { SafeAreaView, ScrollView } from 'react-native';
 import { Gallery } from './containers' 
 import { Provider } from 'react-redux'
 import store from "./redux/store"
-import Constants from 'expo-constants';
 const App = () => {
   return (
     <Provider store={store}>
