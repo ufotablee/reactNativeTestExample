@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native'
-import { GalleryItem } from '../../components'
+import  GalleryItem  from '../../components/GalleryItem/index'
 
 const GroupList = ({data}) => {
   return (

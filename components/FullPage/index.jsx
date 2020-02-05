@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal,Button } from 'react-native';
+import { Modal,Button,Text } from 'react-native';
 import styled from 'styled-components/native'
 
 const FullPage = ({url,setIsVisiable,visiable}) => {
@@ -9,15 +9,26 @@ const FullPage = ({url,setIsVisiable,visiable}) => {
      animationType="slide"
      transparent={false}
      >
-     <Button
-          title="Back"
-          onPress={() => setIsVisiable(!visiable)}
-      />
      <GroupImg source={{uri: url}} /> 
+     <CustomButton 
+      ><ButtonText onPress={() => setIsVisiable(!visiable)}>Back</ButtonText>
+      </CustomButton>
      </Modal>
     </Container>
   );
 }
+const ButtonText = styled.Text`
+top: 25%;
+font-weight: bold;
+font-size: 20px;
+text-align: center
+color: #fff`;
+const CustomButton = styled.View`
+background: #00a0fc;
+position:absolute;
+bottom:0;
+width:100%;
+height: 50px`;
 const GroupImg = styled.Image`
 margin: 0 auto;
 top: 25%;
